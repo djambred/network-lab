@@ -1,0 +1,41 @@
+name: mikrotik
+mgmt:
+  network: mikrotik-mgmt
+  ipv4-subnet: 172.16.20.0/24
+
+topology:
+  nodes:
+    r1:
+      kind: vr-ros
+      image: mikrotik/chr:latest
+      ports:
+        - 2001:22/tcp    # SSH akses ke R1
+        - 2002:8728/tcp  # API/Winbox access
+
+    r2:
+      kind: vr-ros
+      image: mikrotik/chr:latest
+      ports:
+        - 2003:22/tcp
+        - 2004:8728/tcp
+
+    h1:
+      kind: linux
+      image: alpine
+      exec:
+        - ip addr add 192.168.1.10/24 dev eth1
+        - ip route del default
+        - ip route add default via 192.168.1.1
+
+    h2:
+      kind: linux
+      image: alpine
+      exec:
+        - ip addr add 192.168.2.10/24 dev eth1
+        - ip route del default
+        - ip route add default via 192.168.2.1
+
+  links:
+    - endpoints: ["h1:eth1", "r1:ether2"]
+    - endpoints: ["r1:ether3", "r2:ether3"]
+    - endpoints: ["h2:eth1", "r2:ether2"]

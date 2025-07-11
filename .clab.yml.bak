@@ -1,0 +1,23 @@
+name: net-lab
+mgmt:
+  network: net-lab-mgmt
+  ipv4-subnet: 172.16.20.0/24
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr
+    r2:
+      kind: linux
+      image: frrouting/frr
+    h1:
+      kind: linux
+      image: alpine
+    h2:
+      kind: linux
+      image: alpine
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r1:eth2", "h1:eth1"]
+    - endpoints: ["r2:eth2", "h2:eth1"]

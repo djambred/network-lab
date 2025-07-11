@@ -1,0 +1,187 @@
+{
+  "name": "net-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "net-lab-mgmt",
+        "bridge": "br-5293220a0ff0",
+        "ipv4-subnet": "172.16.20.0/24",
+        "ipv4-gw": "172.16.20.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsxwVI5ROPuvtf3fLCvtfdGHlmCd1sGyMXFVI4DGCkA"],
+  "nodes": {
+    "h1": {
+      "index": "0",
+      "shortname": "h1",
+      "longname": "clab-net-lab-h1",
+      "fqdn": "h1.net-lab.io",
+      "group": "",
+      "labdir": "/root/network-lab/clab-net-lab/h1",
+      "kind": "linux",
+      "image": "alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5293220a0ff0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/network-lab/clab-net-lab/h1",
+        "clab-node-longname": "clab-net-lab-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/network-lab/clab.yml",
+        "containerlab": "net-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h2": {
+      "index": "1",
+      "shortname": "h2",
+      "longname": "clab-net-lab-h2",
+      "fqdn": "h2.net-lab.io",
+      "group": "",
+      "labdir": "/root/network-lab/clab-net-lab/h2",
+      "kind": "linux",
+      "image": "alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5293220a0ff0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/network-lab/clab-net-lab/h2",
+        "clab-node-longname": "clab-net-lab-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/network-lab/clab.yml",
+        "containerlab": "net-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "2",
+      "shortname": "r1",
+      "longname": "clab-net-lab-r1",
+      "fqdn": "r1.net-lab.io",
+      "group": "",
+      "labdir": "/root/network-lab/clab-net-lab/r1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5293220a0ff0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/network-lab/clab-net-lab/r1",
+        "clab-node-longname": "clab-net-lab-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/network-lab/clab.yml",
+        "containerlab": "net-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r2": {
+      "index": "3",
+      "shortname": "r2",
+      "longname": "clab-net-lab-r2",
+      "fqdn": "r2.net-lab.io",
+      "group": "",
+      "labdir": "/root/network-lab/clab-net-lab/r2",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5293220a0ff0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/network-lab/clab-net-lab/r2",
+        "clab-node-longname": "clab-net-lab-r2",
+        "clab-node-name": "r2",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/network-lab/clab.yml",
+        "containerlab": "net-lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "r1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:11:b8:34",
+        "peer": "z"
+      },
+      "z": {
+        "node": "r2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:87:8d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:71:8d:90",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:42:40:d3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "r2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d2:b3:f3",
+        "peer": "z"
+      },
+      "z": {
+        "node": "h2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f6:6e:99",
+        "peer": "a"
+      }
+    }
+  ]
+}

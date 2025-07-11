@@ -152,3 +152,13 @@ r2#
 ```bash
 write
 ```
+
+# CHECK CONFIGURATION
+
+```bash
+docker exec -it clab-cisco-h1 ping 192.168.2.10
+```
+
+```bash
+docker exec -it clab-cisco-h2 ping 192.168.1.10
+```

@@ -8,14 +8,14 @@ h2:
     username: 
     password: 
     platform: linux
-    hostname: 172.16.20.2
+    hostname: 172.16.20.4
 r1:
     username: 
     password: 
     platform: linux
-    hostname: 172.16.20.3
+    hostname: 172.16.20.2
 r2:
     username: 
     password: 
     platform: linux
-    hostname: 172.16.20.4
+    hostname: 172.16.20.3

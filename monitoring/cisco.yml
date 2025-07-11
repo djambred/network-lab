@@ -1,0 +1,56 @@
+name: cisco
+mgmt:
+  network: cisco-mgmt
+  ipv4-subnet: 172.16.20.0/24
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr
+      exec:
+        - apk add --no-cache curl
+        - curl -L -o /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
+        - tar -xzf /tmp/node_exporter.tar.gz -C /tmp
+        - cp /tmp/node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
+        - chmod +x /usr/local/bin/node_exporter
+        - sh -c "node_exporter &"
+    r2:
+      kind: linux
+      image: frrouting/frr
+      exec:
+        - apk add --no-cache curl
+        - curl -L -o /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
+        - tar -xzf /tmp/node_exporter.tar.gz -C /tmp
+        - cp /tmp/node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
+        - chmod +x /usr/local/bin/node_exporter
+        - sh -c "node_exporter &"
+    h1:
+      kind: linux
+      image: alpine
+      exec:
+        - apk add --no-cache curl
+        - curl -L -o /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
+        - tar -xzf /tmp/node_exporter.tar.gz -C /tmp
+        - cp /tmp/node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
+        - chmod +x /usr/local/bin/node_exporter
+        - ip addr add 192.168.1.10/24 dev eth1
+        - ip route del default
+        - ip route add default via 192.168.1.1
+        - sh -c "node_exporter &"
+    h2:
+      kind: linux
+      image: alpine
+      exec:
+        - apk add --no-cache curl
+        - curl -L -o /tmp/node_exporter.tar.gz https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
+        - tar -xzf /tmp/node_exporter.tar.gz -C /tmp
+        - cp /tmp/node_exporter-1.8.1.linux-amd64/node_exporter /usr/local/bin/
+        - chmod +x /usr/local/bin/node_exporter
+        - ip addr add 192.168.2.10/24 dev eth1
+        - ip route del default
+        - ip route add default via 192.168.2.1
+        - sh -c "node_exporter &"
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r1:eth2", "h1:eth1"]
+    - endpoints: ["r2:eth2", "h2:eth1"]

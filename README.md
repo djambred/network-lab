@@ -49,3 +49,9 @@ Configuration saved to /etc/frr/zebra.conf
 Configuration saved to /etc/frr/staticd.conf
 r2#
 ```
+
+# Melihat Topologi
+
+```bash
+containerlab graph -t cisco.yml --srv ":80"
+```

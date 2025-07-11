@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "cisco-mgmt",
-        "bridge": "br-eab9390cd31c",
+        "bridge": "br-3ba912c52d45",
         "ipv4-subnet": "172.16.20.0/24",
         "ipv4-gw": "172.16.20.1",
         "external-access": true
@@ -26,13 +26,13 @@
       "image": "alpine",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.3",
+      "mgmt-ipv4-address": "172.16.20.5",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-eab9390cd31c",
+        "clab-mgmt-net-bridge": "br-3ba912c52d45",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/cisco/clab-cisco/h1",
@@ -63,7 +63,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-eab9390cd31c",
+        "clab-mgmt-net-bridge": "br-3ba912c52d45",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/cisco/clab-cisco/h2",
@@ -88,13 +88,13 @@
       "image": "frrouting/frr",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.4",
+      "mgmt-ipv4-address": "172.16.20.3",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-eab9390cd31c",
+        "clab-mgmt-net-bridge": "br-3ba912c52d45",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/cisco/clab-cisco/r1",
@@ -119,13 +119,13 @@
       "image": "frrouting/frr",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.5",
+      "mgmt-ipv4-address": "172.16.20.4",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-eab9390cd31c",
+        "clab-mgmt-net-bridge": "br-3ba912c52d45",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/cisco/clab-cisco/r2",
@@ -145,13 +145,13 @@
       "a": {
         "node": "r1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:23:cf:4c",
+        "mac": "aa:c1:ab:83:e0:f4",
         "peer": "z"
       },
       "z": {
         "node": "r2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:1f:f1:89",
+        "mac": "aa:c1:ab:8e:61:20",
         "peer": "a"
       }
     },
@@ -159,13 +159,13 @@
       "a": {
         "node": "r1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:b7:e8:25",
+        "mac": "aa:c1:ab:cf:d9:d4",
         "peer": "z"
       },
       "z": {
         "node": "h1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:86:4b:ff",
+        "mac": "aa:c1:ab:a8:12:12",
         "peer": "a"
       }
     },
@@ -173,13 +173,13 @@
       "a": {
         "node": "r2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:97:25:a8",
+        "mac": "aa:c1:ab:c1:aa:95",
         "peer": "z"
       },
       "z": {
         "node": "h2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:ea:df:e4",
+        "mac": "aa:c1:ab:54:5f:75",
         "peer": "a"
       }
     }

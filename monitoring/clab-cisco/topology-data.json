@@ -6,10 +6,9 @@
       "prefix": "clab",
       "mgmt": {
         "network": "cisco-mgmt",
-        "bridge": "br-ae2fb6baeb25",
-        "ipv4-subnet": "172.16.20.0/24",
-        "ipv4-gw": "172.16.20.1",
-        "ipv6-gw": "fe80::3821:2bff:fe31:c766",
+        "bridge": "br-1a1694cfe7c0",
+        "ipv4-subnet": "172.16.10.0/24",
+        "ipv4-gw": "172.16.10.1",
         "external-access": true
       }
     }
@@ -22,26 +21,26 @@
       "longname": "clab-cisco-h1",
       "fqdn": "h1.cisco.io",
       "group": "",
-      "labdir": "/root/network-lab/cisco/monitoring/clab-cisco/h1",
+      "labdir": "/root/network-lab/monitoring/clab-cisco/h1",
       "kind": "linux",
       "image": "alpine",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.2",
+      "mgmt-ipv4-address": "172.16.10.2",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-ae2fb6baeb25",
+        "clab-mgmt-net-bridge": "br-1a1694cfe7c0",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/root/network-lab/cisco/monitoring/clab-cisco/h1",
+        "clab-node-lab-dir": "/root/network-lab/monitoring/clab-cisco/h1",
         "clab-node-longname": "clab-cisco-h1",
         "clab-node-name": "h1",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/network-lab/cisco/monitoring/cisco.yml",
+        "clab-topo-file": "/root/network-lab/monitoring/cisco.yml",
         "containerlab": "cisco"
       },
       "port-bindings": [
@@ -53,26 +52,26 @@
       "longname": "clab-cisco-h2",
       "fqdn": "h2.cisco.io",
       "group": "",
-      "labdir": "/root/network-lab/cisco/monitoring/clab-cisco/h2",
+      "labdir": "/root/network-lab/monitoring/clab-cisco/h2",
       "kind": "linux",
       "image": "alpine",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.3",
+      "mgmt-ipv4-address": "172.16.10.3",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-ae2fb6baeb25",
+        "clab-mgmt-net-bridge": "br-1a1694cfe7c0",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/root/network-lab/cisco/monitoring/clab-cisco/h2",
+        "clab-node-lab-dir": "/root/network-lab/monitoring/clab-cisco/h2",
         "clab-node-longname": "clab-cisco-h2",
         "clab-node-name": "h2",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/network-lab/cisco/monitoring/cisco.yml",
+        "clab-topo-file": "/root/network-lab/monitoring/cisco.yml",
         "containerlab": "cisco"
       },
       "port-bindings": [
@@ -84,26 +83,26 @@
       "longname": "clab-cisco-r1",
       "fqdn": "r1.cisco.io",
       "group": "",
-      "labdir": "/root/network-lab/cisco/monitoring/clab-cisco/r1",
+      "labdir": "/root/network-lab/monitoring/clab-cisco/r1",
       "kind": "linux",
       "image": "frrouting/frr",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.4",
+      "mgmt-ipv4-address": "172.16.10.4",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-ae2fb6baeb25",
+        "clab-mgmt-net-bridge": "br-1a1694cfe7c0",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/root/network-lab/cisco/monitoring/clab-cisco/r1",
+        "clab-node-lab-dir": "/root/network-lab/monitoring/clab-cisco/r1",
         "clab-node-longname": "clab-cisco-r1",
         "clab-node-name": "r1",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/network-lab/cisco/monitoring/cisco.yml",
+        "clab-topo-file": "/root/network-lab/monitoring/cisco.yml",
         "containerlab": "cisco"
       },
       "port-bindings": [
@@ -115,26 +114,26 @@
       "longname": "clab-cisco-r2",
       "fqdn": "r2.cisco.io",
       "group": "",
-      "labdir": "/root/network-lab/cisco/monitoring/clab-cisco/r2",
+      "labdir": "/root/network-lab/monitoring/clab-cisco/r2",
       "kind": "linux",
       "image": "frrouting/frr",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.5",
+      "mgmt-ipv4-address": "172.16.10.5",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-ae2fb6baeb25",
+        "clab-mgmt-net-bridge": "br-1a1694cfe7c0",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/root/network-lab/cisco/monitoring/clab-cisco/r2",
+        "clab-node-lab-dir": "/root/network-lab/monitoring/clab-cisco/r2",
         "clab-node-longname": "clab-cisco-r2",
         "clab-node-name": "r2",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/network-lab/cisco/monitoring/cisco.yml",
+        "clab-topo-file": "/root/network-lab/monitoring/cisco.yml",
         "containerlab": "cisco"
       },
       "port-bindings": [
@@ -146,13 +145,13 @@
       "a": {
         "node": "r1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:c0:94:18",
+        "mac": "aa:c1:ab:58:61:29",
         "peer": "z"
       },
       "z": {
         "node": "r2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:af:29:cb",
+        "mac": "aa:c1:ab:37:14:21",
         "peer": "a"
       }
     },
@@ -160,13 +159,13 @@
       "a": {
         "node": "r1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:c3:c0:80",
+        "mac": "aa:c1:ab:d2:38:6f",
         "peer": "z"
       },
       "z": {
         "node": "h1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:7a:db:1f",
+        "mac": "aa:c1:ab:a0:67:75",
         "peer": "a"
       }
     },
@@ -174,13 +173,13 @@
       "a": {
         "node": "r2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:25:2b:8e",
+        "mac": "aa:c1:ab:ba:4f:6d",
         "peer": "z"
       },
       "z": {
         "node": "h2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:96:55:02",
+        "mac": "aa:c1:ab:58:28:51",
         "peer": "a"
       }
     }

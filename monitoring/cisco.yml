@@ -1,7 +1,7 @@
 name: cisco
 mgmt:
   network: cisco-mgmt
-  ipv4-subnet: 172.16.20.0/24
+  ipv4-subnet: 172.16.10.0/24
 topology:
   nodes:
     r1:

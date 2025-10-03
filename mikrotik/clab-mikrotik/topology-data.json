@@ -6,14 +6,14 @@
       "prefix": "clab",
       "mgmt": {
         "network": "mikrotik-mgmt",
-        "bridge": "br-33abadf88e20",
+        "bridge": "br-c70dbc54dda4",
         "ipv4-subnet": "172.16.20.0/24",
         "ipv4-gw": "172.16.20.1",
         "external-access": true
       }
     }
   },
-  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsxwVI5ROPuvtf3fLCvtfdGHlmCd1sGyMXFVI4DGCkA"],
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH9jxFt/nmcwF9hy8nDc94KcywQuyYA0yV/I+hQvGLQL"],
   "nodes": {
     "h1": {
       "index": "0",
@@ -26,13 +26,13 @@
       "image": "alpine",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.2",
+      "mgmt-ipv4-address": "172.16.20.3",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-33abadf88e20",
+        "clab-mgmt-net-bridge": "br-c70dbc54dda4",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/mikrotik/clab-mikrotik/h1",
@@ -57,13 +57,13 @@
       "image": "alpine",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.3",
+      "mgmt-ipv4-address": "172.16.20.4",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-33abadf88e20",
+        "clab-mgmt-net-bridge": "br-c70dbc54dda4",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/network-lab/mikrotik/clab-mikrotik/h2",
@@ -88,13 +88,13 @@
       "image": "mikrotik/chr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.4",
+      "mgmt-ipv4-address": "172.16.20.5",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-33abadf88e20",
+        "clab-mgmt-net-bridge": "br-c70dbc54dda4",
         "clab-node-group": "",
         "clab-node-kind": "vr-ros",
         "clab-node-lab-dir": "/root/network-lab/mikrotik/clab-mikrotik/r1",
@@ -143,13 +143,13 @@
       "image": "mikrotik/chr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.16.20.5",
+      "mgmt-ipv4-address": "172.16.20.2",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-33abadf88e20",
+        "clab-mgmt-net-bridge": "br-c70dbc54dda4",
         "clab-node-group": "",
         "clab-node-kind": "vr-ros",
         "clab-node-lab-dir": "/root/network-lab/mikrotik/clab-mikrotik/r2",
@@ -163,26 +163,26 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
-          "host-port": 2003,
-          "port": 22,
+          "host-port": 2004,
+          "port": 8728,
           "protocol": "tcp"
         },
         {
           "host-ip": "::",
-          "host-port": 2003,
-          "port": 22,
+          "host-port": 2004,
+          "port": 8728,
           "protocol": "tcp"
         },
         {
           "host-ip": "0.0.0.0",
-          "host-port": 2004,
-          "port": 8728,
+          "host-port": 2003,
+          "port": 22,
           "protocol": "tcp"
         },
         {
           "host-ip": "::",
-          "host-port": 2004,
-          "port": 8728,
+          "host-port": 2003,
+          "port": 22,
           "protocol": "tcp"
         }
       ]
@@ -193,13 +193,13 @@
       "a": {
         "node": "h1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:3f:25:7f",
+        "mac": "aa:c1:ab:8f:9a:a2",
         "peer": "z"
       },
       "z": {
         "node": "r1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:9e:12:fa",
+        "mac": "aa:c1:ab:6c:fa:da",
         "peer": "a"
       }
     },
@@ -207,13 +207,13 @@
       "a": {
         "node": "r1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:dd:61:9b",
+        "mac": "aa:c1:ab:6b:fa:be",
         "peer": "z"
       },
       "z": {
         "node": "r2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:ed:e3:61",
+        "mac": "aa:c1:ab:b2:b8:a3",
         "peer": "a"
       }
     },
@@ -221,13 +221,13 @@
       "a": {
         "node": "h2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:48:14:7c",
+        "mac": "aa:c1:ab:21:25:c2",
         "peer": "z"
       },
       "z": {
         "node": "r2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:be:d1:1f",
+        "mac": "aa:c1:ab:8f:90:8a",
         "peer": "a"
       }
     }

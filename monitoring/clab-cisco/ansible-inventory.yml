@@ -8,10 +8,10 @@ all:
     linux:
       hosts:
         clab-cisco-h1:
-          ansible_host: 172.16.10.2
-        clab-cisco-h2:
           ansible_host: 172.16.10.3
+        clab-cisco-h2:
+          ansible_host: 172.16.10.2
         clab-cisco-r1:
-          ansible_host: 172.16.10.4
-        clab-cisco-r2:
           ansible_host: 172.16.10.5
+        clab-cisco-r2:
+          ansible_host: 172.16.10.4

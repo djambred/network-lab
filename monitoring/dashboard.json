@@ -414,7 +414,7 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Full Node Monitoring Dashboard",
-  "uid": "full-node-dashboard",
+  "title": "Monitoring Dashboard",
+  "uid": "monitoring-dashboard",
   "version": 2
 }
